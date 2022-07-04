@@ -21,14 +21,14 @@ interface TransactionsProviderProps {
     children: ReactNode;
 }
 
-// type TransactionInput = Omit<Transaction, 'id' | 'createdAt'>
+type TransactionInput = Omit<Transaction, 'id' | 'createdAt'>
 
 interface TransactionsContextData {
     transactions: Transaction[];
     createTransaction: (transaction: TransactionInput) => Promise<void>
 }
 
-type TransactionInput = Pick<Transaction, 'title' | 'amount' | 'type' | 'category'>
+// type TransactionInput = Pick<Transaction, 'title' | 'amount' | 'type' | 'category'>
 
 export const TransactionsContext = createContext<TransactionsContextData>({} as TransactionsContextData);
 
