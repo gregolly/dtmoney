@@ -7,7 +7,7 @@ interface Transaction {
     amount: number;
     type: string;
     category: string;
-    createadAt: string;
+    createdAt: string;
 }
 
 // interface TransactionInput {
@@ -42,7 +42,7 @@ export function TransactionsProvider({ children }: TransactionsProviderProps) {
 
     async function createTransaction(transactionInput: TransactionInput) {
         const response = await api.post("/transactions", { 
-            transactionInput, 
+            ...transactionInput, 
             createdAt: new Date()
         });
         

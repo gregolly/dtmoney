@@ -4,6 +4,8 @@ import { Container } from "./styles"
 export function TransactionsTable() {
     const { transactions } = useTransactions();
 
+    console.log(transactions.map(el => console.log(el)))
+
     return (
         <Container>
             <table>
@@ -29,7 +31,9 @@ export function TransactionsTable() {
                                 </td>
                                 <td>{transaction.category}</td>
                                 <td>
-                                    {new Intl.DateTimeFormat("pt-BR").format(new Date(transaction.createadAt))}
+                                    {new Intl.DateTimeFormat("pt-BR").format(
+                                        new Date(transaction.createdAt)
+                                    )}
                                 </td>
                             </tr>
                         )
