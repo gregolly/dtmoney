@@ -54,7 +54,7 @@ export const GlobalStyle = createGlobalStyle`
         cursor: not-allowed;
     }
 
-    .react-modal-overlay {
+    .ReactModal__Overlay {
         background-color: rgba(0,0,0,.5);
         position: fixed;
         top: 0;
@@ -63,9 +63,10 @@ export const GlobalStyle = createGlobalStyle`
         display: flex;
         align-items: center;
         justify-content: center;
+        width: 100%;
     }
 
-    .react-modal-content {
+    .ReactModal__Content  {
         width: 100%;
         max-width: 576px;
         background-color: var(--background);
@@ -77,7 +78,7 @@ export const GlobalStyle = createGlobalStyle`
     .react-modal-close {
         position: absolute;
         right: 1.5rem;
-        bottom: 1.5rem;
+        top: 1.5rem;
         border: 0;
         background-color: transparent;
         
